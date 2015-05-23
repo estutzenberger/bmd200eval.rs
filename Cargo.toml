@@ -1,0 +1,7 @@
+[package]
+name = "bmd200eval"
+version = "0.1.0"
+authors = ["Eric Stutzenberger <eric.stutzenberger@rigado.com>"]
+
+[dependencies.nrf51822]
+path = "../nrf51822.rs"

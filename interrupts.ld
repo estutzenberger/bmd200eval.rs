@@ -1,0 +1,26 @@
+PROVIDE(power_clock     = abort);
+PROVIDE(radio           = abort);
+PROVIDE(uart0       	= abort);
+PROVIDE(spi_twi_0       = abort);
+PROVIDE(spi_twi_1       = abort);
+PROVIDE(gpiote          = abort);
+PROVIDE(adc             = abort);
+PROVIDE(timer0          = abort);
+PROVIDE(timer1          = abort);
+PROVIDE(timer2          = abort);
+PROVIDE(rtc0            = abort);
+PROVIDE(temp            = abort);
+PROVIDE(rng             = abort);
+PROVIDE(ecb             = abort);
+PROVIDE(ccm_aar         = abort);
+PROVIDE(wdt             = abort);
+PROVIDE(rtc1            = abort);
+PROVIDE(qdec            = abort);
+PROVIDE(lpcomp          = abort);
+PROVIDE(swi0            = abort);
+PROVIDE(swi1            = abort);
+PROVIDE(swi2            = abort);
+PROVIDE(swi3            = abort);
+PROVIDE(swi4            = abort);
+PROVIDE(swi5            = abort);
+
