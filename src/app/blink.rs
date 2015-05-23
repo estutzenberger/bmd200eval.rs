@@ -13,6 +13,8 @@ extern crate cortex;
 use nrf51822::interrupt::IntVector;
 use cortex::nvic::iser0;
 
+const CC0VAL: u32 = 16384;
+
 pub fn get_nvic_iser0_mask(vector: IntVector) -> iser0::Bit {
 	match vector {
 		nrf51822::interrupt::IntVector::RTC0Irqn => iser0::Bit::_11
@@ -40,7 +42,7 @@ pub fn main() {
     	intenset | COMPARE0
     });
 
-    rtc0.cc0.set(40);
+    rtc0.cc0.set(CC0VAL);
 
     // unmask RTC0 interrupt
     nvic.iser0.set({
@@ -77,10 +79,10 @@ pub fn main() {
         if state == true {
         	state = false;
         	
-        	rtc0.cc0.set(750);
+        	rtc0.cc0.set(CC0VAL);
         } else {
         	state = true;
-        	rtc0.cc0.set(40);
+        	rtc0.cc0.set(CC0VAL);
         }	
 
         rtc0.tasks_clear.set(1);
